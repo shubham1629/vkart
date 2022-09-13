@@ -1,0 +1,15 @@
+.nav {
+    &__item {
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px;
+        &:hover {
+            background-color: rgba(128, 128, 128, 0.20);
+            box-shadow: 5px 5px 5px rgba(37, 37, 37, 0.2);;
+        }
+
+        &__symbol {
+            margin-right: 10px;
+        }
+    }
+}

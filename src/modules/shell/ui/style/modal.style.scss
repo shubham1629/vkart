@@ -1,0 +1,36 @@
+.modal {
+    background-color: white;
+    padding: 10px;
+    min-width: 50vw;
+    min-height: 50vh;
+    
+    .close-icon-btn {
+        float: right;
+        padding: 7px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    
+}
+
+.modal-animate-1 {
+    .close {
+        min-height: 0;
+        height: 0;
+        min-width: 0;
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+        transition: all .5s;
+    }
+}
+
+.modal-animate-2 {
+    .close {
+        opacity: 0;
+        transition: all .5s;
+    }
+}
+
+
+

@@ -1,0 +1,22 @@
+<div class="modal-animate-2">
+    <div class="modal" #modal>
+        <span *ngIf="!hideCrossBtn" class="close-icon-btn" (click) ="modal.classList.add(closeClass)">
+            <fa-icon [icon]="closeIcon" size="2x"></fa-icon>
+        </span>
+        <div *ngIf="header">
+            <h1 *ngIf="header instanceof string">
+                {{header}}
+            </h1>
+            <ng-template *ngIf="header instanceof TemplateRef">
+                <ng-template [ngTemplateOutlet]="header" [ngOutletContext]="context"></ng-template>
+                <ng-container *ngTemplateOutlet="header"></ng-container>
+            </ng-template>
+        </div>
+        
+        <div>body</div>
+        <div>
+            <button (click) ="modal.classList.add(closeClass)">close</button>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,303 @@
+
+******************************************************************************
+            
+Starting DB at Sun Sep 18 2022 15:51:50 GMT+0530 (India Standard Time)
+            
+******************************************************************************{
+	datetime: Sun Sep 18 2022 15:51:55 GMT+0530 (India Standard Time)
+	query: SELECT
+            COUNT(1) count
+        FROM User
+	res: [{"count":1}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:51:55 GMT+0530 (India Standard Time)
+	query: SELECT 
+            u.id id, 
+            u.fname firstName,
+            u.lname lastName,
+            u.contactNumber contactNumber,
+            u.email email,
+            u.status status,
+            u.createdOn createdOn,
+            u.createdBy createdBy,
+            u.updatedBy updatedBy,
+            u.updatedOn updatedOn,
+            f.url profilePicURL,
+            a.pincode pincode,
+            a.fullAddress fullAddress
+        FROM User u
+            LEFT OUTER JOIN Assets f 
+                ON u.profilePic = f.id
+            LEFT OUTER JOIN Address a
+                ON u.addressId = a.id
+	res: [{"id":1,"firstName":"admin","lastName":"admin","contactNumber":"123","email":"@gmail.com","status":"1","createdOn":"2022-09-17 16:46:47","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:51:57 GMT+0530 (India Standard Time)
+	query: INSERT INTO User(
+        fname, lname, contactNumber,
+        email, status, createdOn, createdBy,
+        profilePic, addressId)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+	res: ["admin","admin","23242","23435@gmail.com","0","2022-09-18T10:21:57.644Z",0,null,null]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:52:00 GMT+0530 (India Standard Time)
+	query: INSERT INTO User(
+        fname, lname, contactNumber,
+        email, status, createdOn, createdBy,
+        profilePic, addressId)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+	res: ["admin","admin","23242","23435@gmail.com","0","2022-09-18T10:22:00.566Z",0,null,null]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:52:12 GMT+0530 (India Standard Time)
+	query: SELECT
+            COUNT(1) count
+        FROM User
+	res: [{"count":3}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:52:12 GMT+0530 (India Standard Time)
+	query: SELECT 
+            u.id id, 
+            u.fname firstName,
+            u.lname lastName,
+            u.contactNumber contactNumber,
+            u.email email,
+            u.status status,
+            u.createdOn createdOn,
+            u.createdBy createdBy,
+            u.updatedBy updatedBy,
+            u.updatedOn updatedOn,
+            f.url profilePicURL,
+            a.pincode pincode,
+            a.fullAddress fullAddress
+        FROM User u
+            LEFT OUTER JOIN Assets f 
+                ON u.profilePic = f.id
+            LEFT OUTER JOIN Address a
+                ON u.addressId = a.id
+	res: [{"id":1,"firstName":"admin","lastName":"admin","contactNumber":"123","email":"@gmail.com","status":"1","createdOn":"2022-09-17 16:46:47","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":2,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:21:57.644Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":3,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:22:00.566Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:53:02 GMT+0530 (India Standard Time)
+	query: SELECT
+            COUNT(1) count
+        FROM User
+	res: [{"count":3}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:53:02 GMT+0530 (India Standard Time)
+	query: SELECT 
+            u.id id, 
+            u.fname firstName,
+            u.lname lastName,
+            u.contactNumber contactNumber,
+            u.email email,
+            u.status status,
+            u.createdOn createdOn,
+            u.createdBy createdBy,
+            u.updatedBy updatedBy,
+            u.updatedOn updatedOn,
+            f.url profilePicURL,
+            a.pincode pincode,
+            a.fullAddress fullAddress
+        FROM User u
+            LEFT OUTER JOIN Assets f 
+                ON u.profilePic = f.id
+            LEFT OUTER JOIN Address a
+                ON u.addressId = a.id
+	res: [{"id":1,"firstName":"admin","lastName":"admin","contactNumber":"123","email":"@gmail.com","status":"1","createdOn":"2022-09-17 16:46:47","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":2,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:21:57.644Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":3,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:22:00.566Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:55:37 GMT+0530 (India Standard Time)
+	query: SELECT
+            COUNT(1) count
+        FROM User
+	res: [{"count":3}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:55:37 GMT+0530 (India Standard Time)
+	query: SELECT 
+            u.id id, 
+            u.fname firstName,
+            u.lname lastName,
+            u.contactNumber contactNumber,
+            u.email email,
+            u.status status,
+            u.createdOn createdOn,
+            u.createdBy createdBy,
+            u.updatedBy updatedBy,
+            u.updatedOn updatedOn,
+            f.url profilePicURL,
+            a.pincode pincode,
+            a.fullAddress fullAddress
+        FROM User u
+            LEFT OUTER JOIN Assets f 
+                ON u.profilePic = f.id
+            LEFT OUTER JOIN Address a
+                ON u.addressId = a.id
+	res: [{"id":1,"firstName":"admin","lastName":"admin","contactNumber":"123","email":"@gmail.com","status":"1","createdOn":"2022-09-17 16:46:47","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":2,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:21:57.644Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":3,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:22:00.566Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:55:53 GMT+0530 (India Standard Time)
+	query: SELECT
+            COUNT(1) count
+        FROM User
+	res: [{"count":3}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:55:53 GMT+0530 (India Standard Time)
+	query: SELECT 
+            u.id id, 
+            u.fname firstName,
+            u.lname lastName,
+            u.contactNumber contactNumber,
+            u.email email,
+            u.status status,
+            u.createdOn createdOn,
+            u.createdBy createdBy,
+            u.updatedBy updatedBy,
+            u.updatedOn updatedOn,
+            f.url profilePicURL,
+            a.pincode pincode,
+            a.fullAddress fullAddress
+        FROM User u
+            LEFT OUTER JOIN Assets f 
+                ON u.profilePic = f.id
+            LEFT OUTER JOIN Address a
+                ON u.addressId = a.id
+	res: [{"id":1,"firstName":"admin","lastName":"admin","contactNumber":"123","email":"@gmail.com","status":"1","createdOn":"2022-09-17 16:46:47","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":2,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:21:57.644Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":3,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:22:00.566Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:55:55 GMT+0530 (India Standard Time)
+	query: SELECT
+            COUNT(1) count
+        FROM User
+	res: [{"count":3}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:55:55 GMT+0530 (India Standard Time)
+	query: SELECT 
+            u.id id, 
+            u.fname firstName,
+            u.lname lastName,
+            u.contactNumber contactNumber,
+            u.email email,
+            u.status status,
+            u.createdOn createdOn,
+            u.createdBy createdBy,
+            u.updatedBy updatedBy,
+            u.updatedOn updatedOn,
+            f.url profilePicURL,
+            a.pincode pincode,
+            a.fullAddress fullAddress
+        FROM User u
+            LEFT OUTER JOIN Assets f 
+                ON u.profilePic = f.id
+            LEFT OUTER JOIN Address a
+                ON u.addressId = a.id
+	res: [{"id":1,"firstName":"admin","lastName":"admin","contactNumber":"123","email":"@gmail.com","status":"1","createdOn":"2022-09-17 16:46:47","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":2,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:21:57.644Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":3,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:22:00.566Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:56:27 GMT+0530 (India Standard Time)
+	query: INSERT INTO User(
+        fname, lname, contactNumber,
+        email, status, createdOn, createdBy,
+        profilePic, addressId)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+	res: ["admin","admin","23242","23435@gmail.com","0","2022-09-18T10:26:27.814Z",0,null,null]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:56:29 GMT+0530 (India Standard Time)
+	query: SELECT
+            COUNT(1) count
+        FROM User
+	res: [{"count":4}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:56:29 GMT+0530 (India Standard Time)
+	query: SELECT 
+            u.id id, 
+            u.fname firstName,
+            u.lname lastName,
+            u.contactNumber contactNumber,
+            u.email email,
+            u.status status,
+            u.createdOn createdOn,
+            u.createdBy createdBy,
+            u.updatedBy updatedBy,
+            u.updatedOn updatedOn,
+            f.url profilePicURL,
+            a.pincode pincode,
+            a.fullAddress fullAddress
+        FROM User u
+            LEFT OUTER JOIN Assets f 
+                ON u.profilePic = f.id
+            LEFT OUTER JOIN Address a
+                ON u.addressId = a.id
+	res: [{"id":1,"firstName":"admin","lastName":"admin","contactNumber":"123","email":"@gmail.com","status":"1","createdOn":"2022-09-17 16:46:47","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":2,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:21:57.644Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":3,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:22:00.566Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":4,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:26:27.814Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null}]
+	err: null
+}
+
+******************************************************************************
+                
+Closing DB at Sun Sep 18 2022 15:59:16 GMT+0530 (India Standard Time)
+                
+******************************************************************************
+
+
+******************************************************************************
+            
+Starting DB at Sun Sep 18 2022 15:59:36 GMT+0530 (India Standard Time)
+            
+******************************************************************************{
+	datetime: Sun Sep 18 2022 15:59:41 GMT+0530 (India Standard Time)
+	query: SELECT
+            COUNT(1) count
+        FROM User
+	res: [{"count":4}]
+	err: null
+}
+{
+	datetime: Sun Sep 18 2022 15:59:41 GMT+0530 (India Standard Time)
+	query: SELECT 
+            u.id id, 
+            u.fname firstName,
+            u.lname lastName,
+            u.contactNumber contactNumber,
+            u.email email,
+            u.status status,
+            u.createdOn createdOn,
+            u.createdBy createdBy,
+            u.updatedBy updatedBy,
+            u.updatedOn updatedOn,
+            f.url profilePicURL,
+            a.pincode pincode,
+            a.fullAddress fullAddress
+        FROM User u
+            LEFT OUTER JOIN Assets f 
+                ON u.profilePic = f.id
+            LEFT OUTER JOIN Address a
+                ON u.addressId = a.id
+	res: [{"id":1,"firstName":"admin","lastName":"admin","contactNumber":"123","email":"@gmail.com","status":"1","createdOn":"2022-09-17 16:46:47","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":2,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:21:57.644Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":3,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:22:00.566Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null},{"id":4,"firstName":"admin","lastName":"admin","contactNumber":"23242","email":"23435@gmail.com","status":"0","createdOn":"2022-09-18T10:26:27.814Z","createdBy":0,"updatedBy":null,"updatedOn":null,"profilePicURL":null,"pincode":null,"fullAddress":null}]
+	err: null
+}

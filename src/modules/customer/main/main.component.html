@@ -1,0 +1,16 @@
+<div class="head">
+    <div class="quick-actions">
+        <button>New ➕</button>
+    </div>
+    <div>
+        
+    </div>
+</div>
+
+<span>Total User count : {{count}}</span>
+<br>
+<span>Users are : </span>
+<br>
+<div *ngFor="let user of users">{{user | json}}</div>
+<br><br><br>
+<button (click)="insert()">Insert</button>

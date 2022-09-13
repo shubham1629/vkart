@@ -1,0 +1,9 @@
+
+
+export class QueryUtil {
+
+    simpleFindQuery() {
+
+    }
+
+}
